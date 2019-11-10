@@ -6,7 +6,7 @@
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 18:43:52 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/10/23 19:38:57 by kpesonen         ###   ########.fr       */
+/*   Updated: 2019/10/30 16:28:36 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = (unsigned char*)dst;
 	s = (unsigned char*)src;
-	if (!(temp = (unsigned char*)malloc(len)))
+	if (!(temp = (unsigned char*)ft_strnew(len)))
 		return (NULL);
 	else
 	{

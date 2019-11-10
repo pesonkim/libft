@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 16:55:24 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/11/07 16:08:41 by kpesonen         ###   ########.fr       */
+/*   Created: 2019/10/24 14:46:57 by kpesonen          #+#    #+#             */
+/*   Updated: 2019/10/24 14:55:51 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	*ft_memalloc(size_t size)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	void	*fresh;
+
+	if (!(fresh = malloc(size)))
+		return (NULL);
+	ft_bzero(fresh, size);
+	return (fresh);
 }

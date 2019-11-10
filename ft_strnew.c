@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 16:55:24 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/11/07 16:08:41 by kpesonen         ###   ########.fr       */
+/*   Created: 2019/10/24 15:07:08 by kpesonen          #+#    #+#             */
+/*   Updated: 2019/10/24 15:17:05 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strnew(size_t size)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	char	*fresh;
+
+	if (!(fresh = (char*)malloc(size + 1)))
+		return (NULL);
+	ft_memset(fresh, '\0', size + 1);
+	return (fresh);
 }

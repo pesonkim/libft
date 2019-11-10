@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 16:55:24 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/11/07 16:08:41 by kpesonen         ###   ########.fr       */
+/*   Created: 2019/10/24 18:06:38 by kpesonen          #+#    #+#             */
+/*   Updated: 2019/10/24 18:20:54 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strtrim(char const *s)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	char	*new;
+
+	if (ft_strchr(s, ' ') == NULL && ft_strchr(s, '\n') == NULL &&
+	ft_strchr(s, '\t') == NULL)
+	{
+		new = ft_strnew(ft_strlen(s));
+		ft_strcpy(new, s);
+		return (new);
+	}
+	return (NULL);
 }

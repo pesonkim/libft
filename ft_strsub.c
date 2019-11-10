@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 16:55:24 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/11/07 16:08:41 by kpesonen         ###   ########.fr       */
+/*   Created: 2019/10/24 16:55:43 by kpesonen          #+#    #+#             */
+/*   Updated: 2019/10/30 19:17:36 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	char	*sub;
+	size_t	i;
+	size_t	j;
+
+	if (!s)
+		return (NULL);
+	i = (size_t)start;
+	j = 0;
+	if (!(sub = ft_strnew(len)))
+		return (NULL);
+	while (len-- > 0)
+	{
+		sub[j] = s[i];
+		i++;
+		j++;
+	}
+	return (sub);
 }
