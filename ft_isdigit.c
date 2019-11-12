@@ -6,15 +6,13 @@
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 15:36:28 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/10/22 15:49:21 by kpesonen         ###   ########.fr       */
+/*   Updated: 2019/11/11 22:09:42 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isdigit(int c)
 {
-	if (c >= (unsigned char)'0' && c <= (unsigned char)'9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);

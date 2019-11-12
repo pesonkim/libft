@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 15:20:57 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/11/11 22:30:11 by kpesonen         ###   ########.fr       */
+/*   Created: 2019/11/11 18:46:03 by kpesonen          #+#    #+#             */
+/*   Updated: 2019/11/11 20:29:40 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strclr(char *s)
+#include "libft.h"
+
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (s)
+	if (new != NULL)
 	{
-		while (*s)
-		{
-			*s = '\0';
-			s++;
-		}
+		new->next = *alst;
+		*alst = new;
 	}
 }

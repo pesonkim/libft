@@ -6,11 +6,9 @@
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 15:24:51 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/10/30 18:31:14 by kpesonen         ###   ########.fr       */
+/*   Updated: 2019/11/11 22:31:16 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {

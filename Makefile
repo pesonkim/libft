@@ -6,7 +6,7 @@
 #    By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/16 15:44:24 by kpesonen          #+#    #+#              #
-#    Updated: 2019/10/22 14:23:21 by kpesonen         ###   ########.fr        #
+#    Updated: 2019/11/11 23:27:27 by kpesonen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,14 +16,13 @@ OBJS = ./*.o
 
 SRCS = ./*ft_*.c
 
-INCLUDES = ./*.h 
+INCLUDES = ./libft.h 
 
 FLAGS = -Wall -Wextra -Werror
 
 .PHONY: all clean fclean re
 
 all: $(NAME)
-
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)

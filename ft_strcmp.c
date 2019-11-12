@@ -6,11 +6,9 @@
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 14:04:54 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/10/30 19:04:27 by kpesonen         ###   ########.fr       */
+/*   Updated: 2019/11/11 21:55:16 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

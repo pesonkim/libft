@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 15:20:57 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/11/11 22:30:11 by kpesonen         ###   ########.fr       */
+/*   Created: 2019/11/11 18:46:44 by kpesonen          #+#    #+#             */
+/*   Updated: 2019/11/11 20:00:38 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strclr(char *s)
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	if (s)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		while (*s)
-		{
-			*s = '\0';
-			s++;
-		}
+		f(lst);
+		lst = lst->next;
 	}
 }

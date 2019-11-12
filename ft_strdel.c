@@ -6,7 +6,7 @@
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 15:17:30 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/10/30 18:25:37 by kpesonen         ###   ########.fr       */
+/*   Updated: 2019/11/12 00:27:36 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_strdel(char **as)
 {
-	if (as != NULL && *as != NULL)
+	if (as && *as)
 	{
 		free(*as);
 		*as = NULL;

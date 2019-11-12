@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 15:20:57 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/11/11 22:30:11 by kpesonen         ###   ########.fr       */
+/*   Created: 2019/11/11 18:45:13 by kpesonen          #+#    #+#             */
+/*   Updated: 2019/11/12 00:27:01 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strclr(char *s)
+#include "libft.h"
+
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	if (s)
+	t_list	*temp;
+	t_list	*next;
+
+	if (!alst || !(*alst) || !del)
+		return ;
+	temp = *alst;
+	while (temp)
 	{
-		while (*s)
-		{
-			*s = '\0';
-			s++;
-		}
+		next = temp->next;
+		ft_lstdelone(&temp, del);
+		temp = next;
 	}
+	*alst = NULL;
 }

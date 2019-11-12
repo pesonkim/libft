@@ -6,11 +6,9 @@
 /*   By: kpesonen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 19:20:25 by kpesonen          #+#    #+#             */
-/*   Updated: 2019/10/17 17:06:04 by kpesonen         ###   ########.fr       */
+/*   Updated: 2019/11/11 21:38:27 by kpesonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {
